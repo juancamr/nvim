@@ -46,7 +46,13 @@ lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.buffer_autoformat()
 end)
 
-lsp_zero.setup_servers({ "lua_ls", "ruff_lsp", "tsserver", "pyright" })
+require("mason").setup()
+require("mason-lspconfig").setup({
+	ensure_installed = { "tsserver", "lua_ls", "pyright" },
+	handlers = {
+		lsp_zero.default_setup,
+	},
+})
 
 -- autocomplete
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
