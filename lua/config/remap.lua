@@ -10,7 +10,7 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "J", "mzJ`z")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
-keymap.set('n', "<C-G>", "<C-G>zz")
+keymap.set("n", "<C-G>", "<C-G>zz")
 
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
@@ -24,10 +24,10 @@ keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 keymap.set("i", "<C-c>", "<Esc>")
 keymap.set("n", "<C-s>", "<cmd>w<CR>")
-keymap.set('i', "<C-s>", "<C-c><cmd>w<CR>")
+keymap.set("i", "<C-s>", "<C-c><cmd>w<CR>")
 
 keymap.set("n", "Q", "<nop>")
-keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -46,6 +46,6 @@ end)
 keymap.set("n", "<leader>q", ":q<CR>", options)
 
 -- for split window
-keymap.set('n', "<leader>t", "<cmd>vsplit<CR>")
-keymap.set('n', "H", "<C-w>h")
-keymap.set('n', "L", "<C-w>l")
+keymap.set("n", "<leader>t", "<cmd>vsplit<CR>")
+keymap.set("n", "H", "<C-w>h")
+keymap.set("n", "L", "<C-w>l")

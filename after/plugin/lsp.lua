@@ -1,4 +1,5 @@
 local lsp_zero = require("lsp-zero")
+local lspkind = require("lspkind")
 local cmp = require("cmp")
 local keymap = vim.keymap
 
@@ -60,7 +61,10 @@ cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 		["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
-		["<Tab>"] = cmp.mapping.confirm({ select = true }),
+		["<C-y>"] = cmp.mapping.confirm({ select = true }),
 		["<C-Space>"] = cmp.mapping.complete(),
 	}),
+	formatting = {
+		format = lspkind.cmp_format(),
+	},
 })
