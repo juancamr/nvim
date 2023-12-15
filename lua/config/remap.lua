@@ -27,6 +27,7 @@ keymap.set("n", "<C-s>", "<cmd>w<CR>")
 keymap.set("i", "<C-s>", "<C-c><cmd>w<CR>")
 
 keymap.set("n", "Q", "<nop>")
+keymap.set("n", "<C-z>", "u")
 -- keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -40,7 +41,7 @@ keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+	vim.cmd("so")
 end)
 
 keymap.set("n", "<leader>q", ":q<CR>", options)

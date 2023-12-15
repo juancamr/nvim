@@ -49,7 +49,7 @@ end)
 
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "tsserver", "lua_ls", "pyright" },
+	ensure_installed = { "tsserver", "lua_ls", "pyright", "astro", "tailwindcss" },
 	handlers = {
 		lsp_zero.default_setup,
 	},
@@ -58,6 +58,9 @@ require("mason-lspconfig").setup({
 -- autocomplete
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 cmp.setup({
+	completion = {
+		completeopt = "menu,menuone,noinsert",
+	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 		["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
