@@ -1,5 +1,10 @@
 require("rose-pine").setup({
-	-- disable_background = true,
+	disable_background = true,
+})
+
+require("gruvbox").setup({
+	transparent_mode = false,
+	contrast = "hard",
 })
 
 function ColorMyPencils(color)

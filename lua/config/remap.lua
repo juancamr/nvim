@@ -23,8 +23,8 @@ keymap.set("n", "<leader>Y", [["+Y]])
 keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 keymap.set("i", "<C-c>", "<Esc>")
--- keymap.set("n", "<C-s>", "<cmd>w<CR>")
--- keymap.set("i", "<C-s>", "<C-c><cmd>w<CR>a")
+keymap.set("n", "<C-s>", "<cmd>w<CR>")
+keymap.set("i", "<C-s>", "<C-c><cmd>w<CR>")
 
 keymap.set("n", "Q", "<nop>")
 keymap.set("n", "<C-z>", "u")
@@ -45,17 +45,3 @@ keymap.set("n", "<leader><leader>", function()
 end)
 
 keymap.set("n", "<leader>q", ":q<CR>", options)
-
--- for split window
-keymap.set("n", "<leader>t", "<cmd>vsplit<CR>")
-keymap.set("n", "H", "<C-w>h")
-keymap.set("n", "L", "<C-w>l")
-
--- copilot
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.g.copilot_tab_fallback = ""
-
-vim.g.copilot_filetypes = {
-	["*"] = false,
-}
