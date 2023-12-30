@@ -30,6 +30,7 @@ return packer.startup(function(use)
 	use({ "kylechui/nvim-surround", tag = "*" })
 	use("stevearc/conform.nvim")
 	use("mfussenegger/nvim-lint")
+	use("windwp/nvim-ts-autotag")
 
 	-- lsp
 	use({
@@ -38,7 +39,6 @@ return packer.startup(function(use)
 		requires = {
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
-			-- { "jay-babu/mason-null-ls.nvim" },
 			{ "neovim/nvim-lspconfig" },
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-nvim-lsp" },
