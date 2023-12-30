@@ -3,7 +3,7 @@ require("conform").setup({
 		lua = { "stylua" },
 		python = { "ruff_format" },
 		javascript = { "eslint_d" },
-		astro = { "prettier" },
+		-- astro = { "prettier" },
 	},
 	format_on_save = {
 		-- I recommend these options. See :help conform.format for details.
