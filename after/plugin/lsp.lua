@@ -41,7 +41,7 @@ lsp_zero.on_attach(function(client, bufnr)
     keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
     -- format on save
-    lsp_zero.buffer_autoformat()
+    -- lsp_zero.buffer_autoformat()
 end)
 
 require("mason").setup()

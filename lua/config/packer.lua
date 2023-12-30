@@ -19,14 +19,17 @@ return packer.startup(function(use)
 
 	-- Color schemes
 	use({ "rose-pine/neovim", as = "rose-pine" })
+	use({ "ellisonleao/gruvbox.nvim" })
 
 	-- Custom plugins
 	use("windwp/nvim-autopairs")
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-lualine/lualine.nvim")
 	use("numToStr/Comment.nvim")
-	use("jose-elias-alvarez/null-ls.nvim")
 	use("onsails/lspkind.nvim")
+	use({ "kylechui/nvim-surround", tag = "*" })
+	use("stevearc/conform.nvim")
+	use("mfussenegger/nvim-lint")
 
 	-- lsp
 	use({
@@ -35,7 +38,7 @@ return packer.startup(function(use)
 		requires = {
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
-			{ "jay-babu/mason-null-ls.nvim" },
+			-- { "jay-babu/mason-null-ls.nvim" },
 			{ "neovim/nvim-lspconfig" },
 			{ "hrsh7th/nvim-cmp" },
 			{ "hrsh7th/cmp-nvim-lsp" },

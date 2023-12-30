@@ -26,9 +26,10 @@ keymap.set("i", "<C-c>", "<Esc>")
 keymap.set("n", "<C-s>", "<cmd>w<CR>")
 keymap.set("i", "<C-s>", "<C-c><cmd>w<CR>")
 
+keymap.set("n", "<leader>l", "iconsole.log()<Esc>i")
+
 keymap.set("n", "Q", "<nop>")
 keymap.set("n", "<C-z>", "u")
--- keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
