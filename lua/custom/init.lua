@@ -6,6 +6,7 @@ opt.relativenumber = true
 opt.scrolloff = 8
 opt.colorcolumn = "80"
 opt.confirm = true
+opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 
 -- no continue comment
 cmd "autocmd BufEnter * set formatoptions-=cro"
