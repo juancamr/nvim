@@ -40,6 +40,14 @@ local plugins = {
     end,
   },
 
+  {
+    "github/copilot.vim",
+    cmd = "Copilot",
+    init = function()
+      require("core.utils").lazy_load "copilot.vim"
+    end,
+  },
+
   -- disabled plugins
   {
     "folke/which-key.nvim",
