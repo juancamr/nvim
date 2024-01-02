@@ -1,9 +1,7 @@
 local opts = {
   formatters_by_ft = {
     lua = { "stylua" },
-    -- Conform will run multiple formatters sequentially
-    python = { "ruff" },
-    -- Use a sub-list to run only the first available formatter
+    python = { "ruff_format" },
     javascript = { "eslint_d" },
   },
   format_on_save = {

@@ -1,4 +1,5 @@
 local plugins = {
+
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -6,12 +7,14 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
+
   {
     "williamboman/mason.nvim",
     opts = function()
       return require "custom.configs.mason"
     end,
   },
+
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
@@ -19,6 +22,7 @@ local plugins = {
       return require "custom.configs.conform"
     end,
   },
+
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -29,12 +33,14 @@ local plugins = {
       require "custom.configs.harpoon"
     end,
   },
+
   {
     "mfussenegger/nvim-lint",
     config = function()
       require "custom.configs.lint"
     end,
   },
+
   {
     "github/copilot.vim",
     cmd = "Copilot",
@@ -42,9 +48,34 @@ local plugins = {
       require("core.utils").lazy_load "copilot.vim"
     end,
   },
+
   {
     "eandrju/cellular-automaton.nvim",
     cmd = "CellularAutomaton",
+  },
+
+  {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup()
+    end,
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    init = function()
+      require("core.utils").lazy_load "nvim-ts-autotag"
+    end,
+    config = function()
+      require("nvim-ts-autotag").setup { enable = true }
+    end,
+  },
+
+  {
+    "mbbill/undotree",
+    cmd = "UndotreeToggle",
   },
 
   -- disabled plugins

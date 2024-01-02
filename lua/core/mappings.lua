@@ -2,60 +2,6 @@
 
 local M = {}
 
-M.general = {
-  --
-  -- n = {
-  --   ["<C-c>"] = { "<Esc>" },
-  --
-  --   -- line numbers
-  --   ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
-  --
-  --   ["<leader>f"] = {
-  --     function()
-  --       require("conform").format { async = true, lsp_fallback = true }
-  --     end,
-  --     "LSP formatting",
-  --   },
-  -- },
-  --
-  -- t = {
-  --   ["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
-  -- },
-  --
-  -- x = {
-  --   ["p"] = { 'p:let @+=@0<CR>:let @"=@0<CR>', "Dont copy replaced text", opts = { silent = true } },
-  -- },
-}
-
-M.tabufline = {
-  plugin = true,
-
-  n = {
-    -- cycle through buffers
-    ["<tab>"] = {
-      function()
-        require("nvchad.tabufline").tabuflineNext()
-      end,
-      "Goto next buffer",
-    },
-
-    ["<S-tab>"] = {
-      function()
-        require("nvchad.tabufline").tabuflinePrev()
-      end,
-      "Goto prev buffer",
-    },
-
-    -- close buffer + hide terminal buffer
-    ["<leader>x"] = {
-      function()
-        require("nvchad.tabufline").close_buffer()
-      end,
-      "Close buffer",
-    },
-  },
-}
-
 M.comment = {
   plugin = true,
 }
@@ -242,26 +188,6 @@ M.nvterm = {
         require("nvterm.terminal").toggle "vertical"
       end,
       "Toggle vertical term",
-    },
-  },
-}
-
-M.whichkey = {
-  plugin = true,
-
-  n = {
-    ["<leader>wK"] = {
-      function()
-        vim.cmd "WhichKey"
-      end,
-      "Which-key all keymaps",
-    },
-    ["<leader>wk"] = {
-      function()
-        local input = vim.fn.input "WhichKey: "
-        vim.cmd("WhichKey " .. input)
-      end,
-      "Which-key query lookup",
     },
   },
 }

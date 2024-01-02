@@ -12,6 +12,7 @@ M.general = {
       end,
     },
     ["<leader>mr"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
+    ["<leader>u"] = { "<cmd>UndotreeToggle<CR>" },
   },
 
   x = {
