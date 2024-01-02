@@ -3,27 +3,28 @@
 local M = {}
 
 M.general = {
-
-  n = {
-    ["<C-c>"] = { "<Esc>" },
-
-    -- line numbers
-    ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
-
-    ["<leader>f"] = {
-      function()
-        require("conform").format { async = true, lsp_fallback = true }
-      end,
-    },
-  },
-
-  t = {
-    ["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
-  },
-
-  x = {
-    ["p"] = { 'p:let @+=@0<CR>:let @"=@0<CR>', "Dont copy replaced text", opts = { silent = true } },
-  },
+  --
+  -- n = {
+  --   ["<C-c>"] = { "<Esc>" },
+  --
+  --   -- line numbers
+  --   ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
+  --
+  --   ["<leader>f"] = {
+  --     function()
+  --       require("conform").format { async = true, lsp_fallback = true }
+  --     end,
+  --     "LSP formatting",
+  --   },
+  -- },
+  --
+  -- t = {
+  --   ["<C-x>"] = { vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true), "Escape terminal mode" },
+  -- },
+  --
+  -- x = {
+  --   ["p"] = { 'p:let @+=@0<CR>:let @"=@0<CR>', "Dont copy replaced text", opts = { silent = true } },
+  -- },
 }
 
 M.tabufline = {
