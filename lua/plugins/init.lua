@@ -220,7 +220,7 @@ local default_plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
-    lazy = false,
+    -- lazy = false,
     init = function()
       require("core.utils").load_mappings "nvimtree"
     end,

@@ -13,6 +13,7 @@ M.general = {
     },
     ["<leader>mr"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
     ["<leader>u"] = { "<cmd>UndotreeToggle<CR>" },
+    ["<leader>pv"] = { vim.cmd.Ex },
   },
 
   x = {
@@ -68,8 +69,8 @@ M.nvimtree = {
   plugin = true,
 
   n = {
-    ["<leader>pv"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
-    ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    -- ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    --
   },
 }
 

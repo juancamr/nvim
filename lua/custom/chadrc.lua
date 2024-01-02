@@ -2,8 +2,8 @@
 local M = {}
 
 M.ui = {
-  theme = "github_light",
-  transparency = false,
+  theme = "gruvbox",
+  transparency = true,
   tabufline = { enabled = false },
   nvdash = {
     load_on_startup = true,
