@@ -17,9 +17,15 @@ local plugins = {
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
-    cmd = { "ConformInfo" },
     opts = function()
       return require "custom.configs.conform"
+    end,
+  },
+
+  {
+    "mfussenegger/nvim-lint",
+    config = function()
+      require "custom.configs.lint"
     end,
   },
 
