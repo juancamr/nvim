@@ -5,14 +5,14 @@ local M = {}
 M.general = {
 
   n = {
-    ["<C-c>"] = { "<Esc>"},
+    ["<C-c>"] = { "<Esc>" },
 
     -- line numbers
     ["<leader>rn"] = { "<cmd> set rnu! <CR>", "Toggle relative number" },
 
     ["<leader>f"] = {
       function()
-        vim.lsp.buf.format { async = true }
+        require("conform").format { async = true, lsp_fallback = true }
       end,
       "LSP formatting",
     },
@@ -164,7 +164,6 @@ M.lspconfig = {
       "List workspace folders",
     },
   },
-
 }
 
 M.nvimtree = {
@@ -244,7 +243,6 @@ M.nvterm = {
       end,
       "Toggle vertical term",
     },
-
   },
 }
 

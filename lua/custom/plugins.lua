@@ -4,21 +4,30 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end
+    end,
   },
 
   {
     "williamboman/mason.nvim",
     opts = function()
       return require "custom.configs.mason"
-    end
+    end,
+  },
+
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    opts = function()
+      return require "custom.configs.conform"
+    end,
   },
 
   -- disabled plugins
   {
     "folke/which-key.nvim",
     enabled = false,
-  }
+  },
 }
 
 return plugins
