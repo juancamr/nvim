@@ -48,6 +48,11 @@ local plugins = {
     end,
   },
 
+  {
+    "eandrju/cellular-automaton.nvim",
+    cmd = "CellularAutomaton",
+  },
+
   -- disabled plugins
   {
     "folke/which-key.nvim",
