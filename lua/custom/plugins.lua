@@ -1,11 +1,5 @@
 local plugins = {
   {
-        "williamboman/mason.nvim",
-    opts = function()
-      require "custom.configs.mason"
-    end
-  },
-  {
     "neovim/nvim-lspconfig",
     config = function()
       require "plugins.configs.lspconfig"
@@ -13,6 +7,12 @@ local plugins = {
     end
   },
 
+  {
+    "williamboman/mason.nvim",
+    opts = function()
+      return require "custom.configs.mason"
+    end
+  },
 
   -- disabled plugins
   {
