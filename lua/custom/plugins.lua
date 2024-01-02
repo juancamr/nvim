@@ -6,14 +6,12 @@ local plugins = {
       require "custom.configs.lspconfig"
     end,
   },
-
   {
     "williamboman/mason.nvim",
     opts = function()
       return require "custom.configs.mason"
     end,
   },
-
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
@@ -21,25 +19,22 @@ local plugins = {
       return require "custom.configs.conform"
     end,
   },
-
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
     init = function()
       require("core.utils").lazy_load "harpoon"
     end,
-    opts = function()
-      return require "custom.configs.harpoon"
+    config = function()
+      require "custom.configs.harpoon"
     end,
   },
-
   {
     "mfussenegger/nvim-lint",
     config = function()
       require "custom.configs.lint"
     end,
   },
-
   {
     "github/copilot.vim",
     cmd = "Copilot",
@@ -47,7 +42,6 @@ local plugins = {
       require("core.utils").lazy_load "copilot.vim"
     end,
   },
-
   {
     "eandrju/cellular-automaton.nvim",
     cmd = "CellularAutomaton",
