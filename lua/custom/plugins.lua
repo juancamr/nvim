@@ -23,6 +23,17 @@ local plugins = {
   },
 
   {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    init = function()
+      require("core.utils").lazy_load "harpoon"
+    end,
+    opts = function()
+      return require "custom.configs.harpoon"
+    end,
+  },
+
+  {
     "mfussenegger/nvim-lint",
     config = function()
       require "custom.configs.lint"

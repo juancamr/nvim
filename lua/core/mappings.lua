@@ -14,7 +14,6 @@ M.general = {
       function()
         require("conform").format { async = true, lsp_fallback = true }
       end,
-      "LSP formatting",
     },
   },
 
