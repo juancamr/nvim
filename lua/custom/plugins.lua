@@ -1,3 +1,6 @@
+local overrides = require "custom.configs.overrides"
+local conformOpts = require "custom.configs.conform"
+
 local plugins = {
 
   {
@@ -10,17 +13,13 @@ local plugins = {
 
   {
     "williamboman/mason.nvim",
-    opts = function()
-      return require "custom.configs.mason"
-    end,
+    opts = overrides.mason,
   },
 
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
-    opts = function()
-      return require "custom.configs.conform"
-    end,
+    opts = conformOpts,
   },
 
   {
@@ -76,6 +75,11 @@ local plugins = {
   {
     "mbbill/undotree",
     cmd = "UndotreeToggle",
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = overrides.treesitter,
   },
 
   -- disabled plugins
