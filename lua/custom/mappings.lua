@@ -6,6 +6,7 @@ M.general = {
     ["<C-z>"] = { "<nop>" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
+    ["<C-s>"] = { "<cmd>w<CR>" },
     ["<leader>f"] = {
       function()
         require("conform").format { async = true, lsp_fallback = true }
@@ -14,6 +15,7 @@ M.general = {
     ["<leader>mr"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
     ["<leader>u"] = { "<cmd>UndotreeToggle<CR>" },
     ["<leader>pv"] = { vim.cmd.Ex },
+    ["<leader>l"] = { "aconsole.log()<Esc>i" },
   },
 
   x = {
@@ -57,7 +59,7 @@ M.harpoon = {
         require("harpoon"):list():select(3)
       end,
     },
-    ["<C-s>"] = {
+    ["<C-m>"] = {
       function()
         require("harpoon"):list():select(4)
       end,

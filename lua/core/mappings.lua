@@ -40,13 +40,13 @@ M.lspconfig = {
       "LSP implementation",
     },
 
-    ["<leader>ls"] = {
-      function()
-        vim.lsp.buf.signature_help()
-      end,
-      "LSP signature help",
-    },
-
+    -- ["<leader>ls"] = {
+    --   function()
+    --     vim.lsp.buf.signature_help()
+    --   end,
+    --   "LSP signature help",
+    -- },
+    --
     ["<leader>D"] = {
       function()
         vim.lsp.buf.type_definition()
