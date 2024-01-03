@@ -10,13 +10,7 @@ M.general = {
     ["<C-s>"] = { "<cmd>w<CR>" },
     ["<leader>mr"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
     ["<leader>u"] = { "<cmd>UndotreeToggle<CR>" },
-    ["<leader>pv"] = { vim.cmd.Ex },
     ["<leader>l"] = { "aconsole.log()<Esc>i" },
-    ["<leader>f"] = {
-      function()
-        require("conform").format { async = true, lsp_fallback = true }
-      end,
-    },
   },
 
   x = {
@@ -30,6 +24,16 @@ M.general = {
   i = {
     ["<C-c>"] = { "<Esc>" },
     ["<C-s>"] = { "<C-c><cmd>w<CR>" },
+  },
+}
+
+M.conform = {
+  n = {
+    ["<leader>f"] = {
+      function()
+        require("conform").format { async = true, lsp_fallback = true }
+      end,
+    },
   },
 }
 
@@ -66,15 +70,6 @@ M.harpoon = {
         require("harpoon"):list():select(4)
       end,
     },
-  },
-}
-
-M.nvimtree = {
-  plugin = true,
-
-  n = {
-    -- ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-    --
   },
 }
 

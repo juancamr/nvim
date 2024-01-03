@@ -3,8 +3,8 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "gruvbox",
-  transparency = true,
+  theme = "catppuccin",
+  transparency = false,
   tabufline = { enabled = false },
   nvdash = {
     load_on_startup = true,
