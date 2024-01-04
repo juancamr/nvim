@@ -27,6 +27,13 @@ M.general = {
   },
 }
 
+M.telescope = {
+  n = {
+    ["<C-p>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
+    ["<leader>ps"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+  },
+}
+
 M.conform = {
   n = {
     ["<leader>f"] = {
@@ -71,6 +78,17 @@ M.harpoon = {
       end,
     },
   },
+}
+
+M.disabled = {
+  ["<leader>ff"] = "",
+  ["<leader>fm"] = "",
+  ["<leader>fa"] = "",
+  ["<leader>fw"] = "",
+  ["<leader>fb"] = "",
+  ["<leader>fh"] = "",
+  ["<leader>fo"] = "",
+  ["<leader>fz"] = "",
 }
 
 return M

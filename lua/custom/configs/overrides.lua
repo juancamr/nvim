@@ -29,4 +29,13 @@ M.mason = {
   },
 }
 
+M.cmp = {
+  mapping = {
+    ["<C-y>"] = require("cmp").mapping.confirm {
+      behavior = require("cmp").ConfirmBehavior.Insert,
+      select = true,
+    },
+  },
+}
+
 return M
