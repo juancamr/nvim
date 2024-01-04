@@ -38,4 +38,14 @@ M.cmp = {
   },
 }
 
+M.telescope = {
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-u>"] = false,
+      },
+    },
+  },
+}
+
 return M

@@ -27,6 +27,13 @@ M.general = {
   },
 }
 
+M.nvimtree = {
+  n = {
+    ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
+    ["<leader>pv"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
+  },
+}
+
 M.telescope = {
   n = {
     ["<C-p>"] = { "<cmd> Telescope find_files <CR>", "Find files" },

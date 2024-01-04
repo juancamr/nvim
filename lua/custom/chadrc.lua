@@ -5,10 +5,10 @@ local highlights = require "custom.highlights"
 M.ui = {
   theme = "catppuccin",
   transparency = false,
-  tabufline = { enabled = false },
-  nvdash = {
-    load_on_startup = true,
-  },
+  -- tabufline = { enabled = false },
+  -- nvdash = {
+  --   load_on_startup = true,
+  -- },
   hl_override = highlights.override,
   hl_add = highlights.add,
 }

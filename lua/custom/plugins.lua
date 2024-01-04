@@ -23,6 +23,10 @@ local plugins = {
     "hrsh7th/nvim-cmp",
     opts = overrides.cmp,
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = overrides.telescope,
+  },
 
   -- custom plugins
   {
