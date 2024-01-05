@@ -88,6 +88,10 @@ local plugins = {
     "folke/which-key.nvim",
     enabled = false,
   },
+  {
+    "nvim-tree/nvim-tree.lua",
+    enabled = false,
+  },
 }
 
 return plugins

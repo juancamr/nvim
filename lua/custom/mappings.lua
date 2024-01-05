@@ -1,4 +1,5 @@
 ---@type MappingsTable
+--
 local M = {}
 
 M.general = {
@@ -7,10 +8,12 @@ M.general = {
     ["<C-z>"] = { "<nop>" },
     ["<C-d>"] = { "<C-d>zz" },
     ["<C-u>"] = { "<C-u>zz" },
-    ["<C-s>"] = { "<cmd>w<CR>" },
     ["<leader>mr"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
     ["<leader>u"] = { "<cmd>UndotreeToggle<CR>" },
     ["<leader>l"] = { "aconsole.log()<Esc>i" },
+    ["<leader>pv"] = { vim.cmd.Ex },
+    ["<leader>vpp"] = { "<cmd>e ~/.config/nvim/lua/custom/plugins.lua<CR>" },
+    ["<C-f>"] = { "<cmd>silent !tmux neww ~/bin/.local/scripts/tmux-sessionizer<CR>" },
   },
 
   x = {
@@ -24,13 +27,7 @@ M.general = {
   i = {
     ["<C-c>"] = { "<Esc>" },
     ["<C-s>"] = { "<C-c><cmd>w<CR>" },
-  },
-}
-
-M.nvimtree = {
-  n = {
-    ["<C-b>"] = { "<cmd> NvimTreeToggle <CR>", "Toggle nvimtree" },
-    ["<leader>pv"] = { "<cmd> NvimTreeFocus <CR>", "Focus nvimtree" },
+    ["<C-v>"] = { "<C-r>+", opts = { noremap = true } },
   },
 }
 
@@ -88,14 +85,30 @@ M.harpoon = {
 }
 
 M.disabled = {
-  ["<leader>ff"] = "",
-  ["<leader>fm"] = "",
-  ["<leader>fa"] = "",
-  ["<leader>fw"] = "",
-  ["<leader>fb"] = "",
-  ["<leader>fh"] = "",
-  ["<leader>fo"] = "",
-  ["<leader>fz"] = "",
+  n = {
+    --telescope mappings
+    ["<leader>ff"] = "",
+    ["<leader>fm"] = "",
+    ["<leader>fa"] = "",
+    ["<leader>fw"] = "",
+    ["<leader>fb"] = "",
+    ["<leader>fh"] = "",
+    ["<leader>fo"] = "",
+    ["<leader>fz"] = "",
+
+    --lspconfig mappings
+    ["<leader>wa"] = "",
+    ["<leader>wr"] = "",
+    ["<leader>wl"] = "",
+
+    --unmap saved keymap
+    ["<C-s>"] = "",
+
+    --unmap motion in panes
+    ["<C-k>"] = "",
+    ["<C-j>"] = "",
+    ["<C-l>"] = "",
+  },
 }
 
 return M

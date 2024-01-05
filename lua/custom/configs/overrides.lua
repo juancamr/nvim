@@ -1,4 +1,5 @@
 local M = {}
+local cmp = require "cmp"
 
 M.treesitter = {
   ensure_installed = {
@@ -31,9 +32,13 @@ M.mason = {
 
 M.cmp = {
   mapping = {
-    ["<C-y>"] = require("cmp").mapping.confirm {
-      behavior = require("cmp").ConfirmBehavior.Insert,
+    ["<C-y>"] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Insert,
       select = true,
+    },
+    ["<Tab>"] = {
+      i = cmp.config.disable,
+      c = cmp.config.disable,
     },
   },
 }
