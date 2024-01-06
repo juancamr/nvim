@@ -2,7 +2,6 @@ local overrides = require "custom.configs.overrides"
 local conformOpts = require "custom.configs.conform"
 
 local plugins = {
-
   -- override plugins
   {
     "neovim/nvim-lspconfig",
@@ -26,6 +25,11 @@ local plugins = {
   {
     "nvim-telescope/telescope.nvim",
     opts = overrides.telescope,
+  },
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = overrides.nvimtree,
+    lazy = false,
   },
 
   -- custom plugins
@@ -89,7 +93,7 @@ local plugins = {
     enabled = false,
   },
   {
-    "nvim-tree/nvim-tree.lua",
+    "windwp/nvim-autopairs",
     enabled = false,
   },
 }

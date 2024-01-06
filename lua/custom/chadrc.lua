@@ -3,7 +3,7 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "catppuccin",
+  theme = "gruvbox",
   transparency = false,
   tabufline = { enabled = false },
   nvdash = {
@@ -16,7 +16,5 @@ M.ui = {
 M.plugins = "custom.plugins"
 
 M.mappings = require "custom.mappings"
-
-M.lazy_nvim = require "custom.configs.lazy"
 
 return M

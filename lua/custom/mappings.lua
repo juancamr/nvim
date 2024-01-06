@@ -11,7 +11,7 @@ M.general = {
     ["<leader>mr"] = { "<cmd>CellularAutomaton make_it_rain<CR>" },
     ["<leader>u"] = { "<cmd>UndotreeToggle<CR>" },
     ["<leader>l"] = { "aconsole.log()<Esc>i" },
-    ["<leader>pv"] = { vim.cmd.Ex },
+    ["<leader>pv"] = { "<cmd>NvimTreeToggle<CR>" },
     ["<leader>vpp"] = { "<cmd>e ~/.config/nvim/lua/custom/plugins.lua<CR>" },
     ["<C-f>"] = { "<cmd>silent !tmux neww ~/bin/.local/scripts/tmux-sessionizer<CR>" },
   },
@@ -100,6 +100,9 @@ M.disabled = {
     ["<leader>wa"] = "",
     ["<leader>wr"] = "",
     ["<leader>wl"] = "",
+
+    ["<leader>ls"] = "",
+    ["<leader>lf"] = "",
 
     --unmap saved keymap
     ["<C-s>"] = "",
