@@ -3,7 +3,7 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "gruvbox",
+  theme = "github_dark",
   transparency = false,
   tabufline = { enabled = false },
   nvdash = {

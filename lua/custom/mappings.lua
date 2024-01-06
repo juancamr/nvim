@@ -104,13 +104,17 @@ M.disabled = {
     ["<leader>ls"] = "",
     ["<leader>lf"] = "",
 
-    --unmap saved keymap
+    -- default saved keymap
     ["<C-s>"] = "",
 
-    --unmap motion in panes
+    -- motion in panes
     ["<C-k>"] = "",
     ["<C-j>"] = "",
     ["<C-l>"] = "",
+
+    -- unmap nvterm
+    ["<leader>h"] = "",
+    ["<leader>v"] = "",
   },
 }
 
