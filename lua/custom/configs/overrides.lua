@@ -59,6 +59,10 @@ M.nvimtree = {
       quit_on_open = true,
     },
   },
+  view = {
+    number = true,
+    relativenumber = true,
+  },
 }
 
 return M
