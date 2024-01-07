@@ -31,13 +31,12 @@ local plugins = {
     opts = overrides.nvimtree,
     lazy = false,
   },
+  {
+    "tpope/vim-fugitive",
+    cmd = "Git",
+  },
 
   -- custom plugins
-  {
-    "stevearc/conform.nvim",
-    event = { "BufWritePre" },
-    opts = conformOpts,
-  },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -50,9 +49,15 @@ local plugins = {
   },
   {
     "mfussenegger/nvim-lint",
+    event = { "BufReadPre", "BufNewFile" },
     config = function()
       require "custom.configs.lint"
     end,
+  },
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    opts = conformOpts,
   },
   {
     "github/copilot.vim",
@@ -96,9 +101,6 @@ local plugins = {
     "NvChad/nvterm",
     enabled = false,
   },
-  --   "windwp/nvim-autopairs",
-  --   enabled = false,
-  -- },
 }
 
 return plugins

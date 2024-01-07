@@ -14,6 +14,14 @@ M.general = {
     ["<leader>pv"] = { "<cmd>NvimTreeToggle<CR>" },
     ["<leader>vpp"] = { "<cmd>e ~/.config/nvim/lua/custom/plugins.lua<CR>" },
     ["<C-f>"] = { "<cmd>silent !tmux neww ~/bin/.local/scripts/tmux-sessionizer<CR>" },
+    ["<leader>gs"] = { "<cmd>top Git<CR>" },
+    [";"] = { ":" },
+    ["<leader>re"] = {
+      function()
+        require("nvchad.renamer").open()
+      end,
+      "LSP rename",
+    },
   },
 
   x = {
