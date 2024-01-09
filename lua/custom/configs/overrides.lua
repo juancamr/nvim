@@ -20,6 +20,7 @@ M.mason = {
     "clangd",
     "astro-language-server",
     "lua-language-server",
+    "rust-analyzer",
 
     -- formatters
     "ruff",

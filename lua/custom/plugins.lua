@@ -101,6 +101,10 @@ local plugins = {
     "NvChad/nvterm",
     enabled = false,
   },
+  {
+    "windwp/nvim-autopairs",
+    enabled = false,
+  },
 }
 
 return plugins
